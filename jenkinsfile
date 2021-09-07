@@ -1,0 +1,22 @@
+pipeline
+{
+aget any 
+stages
+{
+	stage('scm checkout')   		//stage name
+	{steps 					//it tells jenkins to perfomr the activity
+	{ sh 'echo code_is_downloading'}	//sh : execute command in shell
+	}
+
+
+
+	stage('build the code')			//stage name, jenkins print stage name in output
+	{steps					//it tells jenkins to perfomr the activity
+	{sh 'echo code_is_building'
+	 sh 'echo code_is_passed'}		//exceute steps in sequence you can provide multiple scripts
+	}
+	
+}
+}
+
+
